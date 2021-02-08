@@ -36,17 +36,6 @@ export { plugin as CatalogPlugin } from '@backstage/plugin-catalog';
 Add the following to your `packages/app/src/apis.ts`:
 
 ```ts
-import { catalogApiRef, CatalogClient } from '@backstage/plugin-catalog';
-
-// Inside the ApiRegistry builder function ...
-
-builder.add(
-  catalogApiRef,
-  new CatalogClient({
-    apiOrigin: backendUrl,
-    basePath: '/catalog',
-  }),
-);
 ```
 
 Where `backendUrl` is the `backend.baseUrl` from config, i.e.
